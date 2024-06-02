@@ -1,0 +1,46 @@
+.navBar {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2em 1em 2em;
+  z-index: 999;
+  transition: 0.3s;
+  border-bottom: 0.5px solid rgb(218, 218, 218);
+}
+
+.navBarUp {
+  padding: 0.8em 0;
+}
+
+.navBarUp h1 {
+  color: #fafafa;
+  font-size: 2.8em;
+  font-weight: 600;
+}
+
+.navBarOptions {
+  list-style: none;
+  display: flex;
+}
+
+.navBarOption {
+  margin: 0 5px;
+  padding: 0.2em 0.5em;
+}
+
+.navBarOption a {
+  cursor: pointer;
+  outline: none;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: #73c883;
+  transition: all 0.3s;
+}
+
+.navBarOption a:hover,
+.navBarOption a:focus {
+  color: #3ea150;
+}
