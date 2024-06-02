@@ -1,0 +1,63 @@
+.mediaAritmedica {
+  background: #0a0a0a;
+  padding: 2em 3em;
+  border: 1px solid #73c883;
+  border-radius: 10px;
+  margin: 3em auto;
+  max-width: 50%;
+  height: auto;
+  color: #fff;
+}
+
+.mediaAritmedica h1 {
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+
+.mediaAritmedica h3 {
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+/* .inputBox {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 0.5em;
+}
+
+.inputBox span {
+  font-weight: 600;
+  margin-bottom: 0.1em;
+  color: #fff;
+  font-size: 1.4em;
+}
+
+.boxInput {
+  display: flex;
+  flex-direction: row;
+} */
+
+.icons {
+  display: flex;
+  align-items: center;
+  width: auto;
+  padding: 0.5em;
+  gap: 0.5em;
+  margin-bottom: 0.6em;
+}
+
+.icons svg {
+  font-size: 2em;
+  opacity: 0.8;
+  color: red;
+}
+
+.icons svg:hover,
+.icons svg:focus {
+  cursor: pointer;
+  opacity: 1;
+}

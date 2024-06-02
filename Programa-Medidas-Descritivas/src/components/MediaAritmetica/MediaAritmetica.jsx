@@ -52,20 +52,20 @@ const MediaAritmetica = () => {
     alert(`A média aritmética é: ${media.toFixed(2)}`);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    calcularMedia();
+  };
+
   return (
     <div className="mediaAritmedica">
       <h1>Cálculo da média aritmética</h1>
       <h3>
-        Para realizar o calculo de média aritmética, basta adicionar os valores
+        Para realizar o cálculo de média aritmética, basta adicionar os valores
         nos campos abaixo e apertar no botão de calcular
       </h3>
 
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          calcularMedia();
-        }}
-      >
+      <form onSubmit={handleSubmit}>
         {valores.map((item, index) => (
           <div className="inputBox" key={item.id}>
             <span>Valor {index + 1}:</span>
