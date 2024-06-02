@@ -73,7 +73,7 @@ const Mediana = () => {
 
   return (
     <div className="mediaAritmedica">
-      <h1>Cálculo da mediana</h1>
+      <h1>Mediana</h1>
       <h3>
         Para realizar o cálculo da mediana, basta adicionar os valores nos
         campos abaixo e apertar no botão de calcular

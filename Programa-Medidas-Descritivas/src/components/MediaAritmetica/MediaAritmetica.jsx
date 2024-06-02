@@ -59,7 +59,7 @@ const MediaAritmetica = () => {
 
   return (
     <div className="mediaAritmedica">
-      <h1>Cálculo da média aritmética</h1>
+      <h1>Média Aritmética</h1>
       <h3>
         Para realizar o cálculo de média aritmética, basta adicionar os valores
         nos campos abaixo e apertar no botão de calcular
