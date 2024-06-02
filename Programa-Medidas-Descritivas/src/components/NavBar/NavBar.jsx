@@ -1,5 +1,7 @@
 import "./NavBar.css";
 
+import { NavLink } from "react-router-dom";
+
 const NavBar = () => {
   return (
     <div className="navBar">
@@ -9,22 +11,26 @@ const NavBar = () => {
       <nav className="navBarDown">
         <ul className="navBarOptions">
           <li className="navBarOption">
-            <a href="">Média aritmética</a>
+            <NavLink to="/media-aritmetica">Média aritmética</NavLink>
           </li>
           <li className="navBarOption">
-            <a href="">Mediana</a>
+            <NavLink to="/mediana">Mediana</NavLink>
           </li>
           <li className="navBarOption">
-            <a href="">Variância amostral</a>
+            <NavLink to="/variancia-amostral">Variância amostral</NavLink>
           </li>
           <li className="navBarOption">
-            <a href="">Desvio padrão</a>
+            <NavLink to="/desvio-padrao">Desvio padrão</NavLink>
           </li>
           <li className="navBarOption">
-            <a href="">Coeficiente de variação</a>
+            <NavLink to="/coeficiente-de-variacao">
+              Coeficiente de variação
+            </NavLink>
           </li>
           <li className="navBarOption">
-            <a href="">Homogêneo ou heterogêneo</a>
+            <NavLink to="/homogeneo-ou-heterogeneo">
+              Homogêneo ou heterogêneo
+            </NavLink>
           </li>
         </ul>
       </nav>

@@ -1,7 +1,7 @@
 import "./DesvioPadrao.css";
 
 const DesvioPadrao = () => {
-  return <div>DesvioPadrao</div>;
+  return <div>Desvio Padrao</div>;
 };
 
 export default DesvioPadrao;

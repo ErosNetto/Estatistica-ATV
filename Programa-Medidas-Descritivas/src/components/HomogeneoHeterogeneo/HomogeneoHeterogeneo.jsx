@@ -1,4 +1,4 @@
-import ";/HomogeneoHeterogeneo.css";
+import "./HomogeneoHeterogeneo.css";
 
 const HomogeneoHeterogeneo = () => {
   return <div>HomogeneoHeterogeneo</div>;

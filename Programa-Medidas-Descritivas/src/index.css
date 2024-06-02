@@ -18,3 +18,91 @@ body {
 a {
   text-decoration: none;
 }
+
+ul {
+  list-style: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Talvez não precise  */
+label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 0.5em;
+}
+
+label span {
+  font-weight: 600;
+  margin-bottom: 0.1em;
+  color: #fff;
+  font-size: 1.4em;
+}
+
+/* Teste */
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 0.6em;
+}
+
+.inputBox span {
+  font-weight: 600;
+  margin-bottom: 0.2em;
+  color: #fff;
+  font-size: 1.4em;
+}
+
+.boxInput {
+  display: flex;
+  flex-direction: row;
+}
+
+input {
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
+  padding: 1em;
+  outline: none;
+  width: 100%;
+  margin-bottom: 0.6em;
+  border: 1px solid #08273c;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+input:hover,
+input:focus {
+}
+
+button,
+input[type="button"],
+input[type="submit"] {
+  width: 100%;
+  border-radius: 10px;
+  padding: 1em;
+  font-weight: 600;
+  font-size: 1em;
+  margin: 0.5em auto;
+  outline: none;
+  color: #fafafa;
+  background-color: #08273c;
+  opacity: 0.8;
+}
+
+button:hover,
+button:focus,
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  cursor: pointer;
+  opacity: 1;
+}
