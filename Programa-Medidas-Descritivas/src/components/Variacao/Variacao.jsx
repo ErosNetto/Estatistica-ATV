@@ -1,5 +1,3 @@
-import "./Variacao.css";
-
 // Icons
 import { BsXCircleFill } from "react-icons/bs";
 
@@ -79,19 +77,18 @@ const Variacao = () => {
   };
 
   return (
-    <div className="mediaAritmedica">
-      <h1>Coeficiente de Variação</h1>
+    <div id="formCalc">
+      <h1>Média Aritmética</h1>
       <h3>
-        Para realizar o cálculo do coeficiente de variação (em porcentagem),
-        basta adicionar os valores nos campos abaixo e apertar no botão de
-        calcular
+        Para realizar o cálculo de média aritmética, basta adicionar os valores
+        nos campos abaixo e apertar no botão de calcular
       </h3>
 
       <form onSubmit={handleSubmit}>
         {valores.map((item, index) => (
-          <div className="inputBox" key={item.id}>
+          <div id="inputBox" key={item.id}>
             <span>Valor {index + 1}:</span>
-            <div className="boxInput">
+            <div id="boxInput">
               <input
                 type="text"
                 placeholder="Digite um valor"
@@ -99,7 +96,7 @@ const Variacao = () => {
                 onChange={(e) => handleChange(item.id, e.target.value)}
               />
               {valores.length > 2 && (
-                <div className="icons">
+                <div id="icons">
                   <BsXCircleFill onClick={() => removerCampo(item.id)} />
                 </div>
               )}
