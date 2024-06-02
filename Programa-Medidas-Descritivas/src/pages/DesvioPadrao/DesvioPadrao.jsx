@@ -4,7 +4,7 @@ import { BsXCircleFill } from "react-icons/bs";
 // Hooks
 import { useState } from "react";
 
-const HomogeneoHeterogeneo = () => {
+const DesvioPadrao = () => {
   const [valores, setValores] = useState([
     { id: 1, valor: "" },
     { id: 2, valor: "" },
@@ -33,19 +33,12 @@ const HomogeneoHeterogeneo = () => {
     setValores(novosValores);
   };
 
-  // Função para determinar se os dados são homogêneos ou heterogêneos
-  const determinarHomogeneidade = () => {
+  // Função para calcular o desvio padrão
+  const calcularDesvioPadrao = () => {
     const valoresValidos = valores.filter((item) => item.valor !== "");
     const valoresNumericos = valoresValidos.map((item) =>
       parseFloat(item.valor)
     );
-
-    if (valoresNumericos.length <= 1) {
-      alert(
-        "Adicione pelo menos dois valores para determinar se os dados são homogêneos ou heterogêneos."
-      );
-      return;
-    }
 
     const soma = valoresNumericos.reduce((acc, valor) => acc + valor, 0);
     const media = soma / valoresNumericos.length;
@@ -58,36 +51,19 @@ const HomogeneoHeterogeneo = () => {
     const variancia = somaDiferencasAoQuadrado / (valoresNumericos.length - 1);
 
     const desvioPadrao = Math.sqrt(variancia);
-
-    if (media === undefined || desvioPadrao === undefined) {
-      alert(
-        "Não é possível calcular o coeficiente de variação. Verifique os valores inseridos."
-      );
-      return;
-    }
-
-    const coeficienteVariacao = (desvioPadrao / media) * 100;
-
-    if (coeficienteVariacao !== undefined) {
-      if (coeficienteVariacao <= 30) {
-        alert("Os dados são homogêneos.");
-      } else {
-        alert("Os dados são heterogêneos.");
-      }
-    }
+    alert(`O desvio padrão é: ${desvioPadrao.toFixed(2)}`);
   };
 
-  // Função para lidar com o envio do formulário
   const handleSubmit = (e) => {
     e.preventDefault();
-    determinarHomogeneidade();
+    calcularDesvioPadrao();
   };
 
   return (
     <div id="formCalc">
-      <h1>Média Aritmética</h1>
+      <h1>Desvio Padrão</h1>
       <h3>
-        Para realizar o cálculo de média aritmética, basta adicionar os valores
+        Para realizar o cálculo do desvio padrão , basta adicionar os valores
         nos campos abaixo e apertar no botão de calcular
       </h3>
 
@@ -112,6 +88,7 @@ const HomogeneoHeterogeneo = () => {
         ))}
 
         <input
+          id="btnAdd"
           type="button"
           value="Adicionar mais um campo"
           onClick={adicionarCampo}
@@ -122,4 +99,4 @@ const HomogeneoHeterogeneo = () => {
   );
 };
 
-export default HomogeneoHeterogeneo;
+export default DesvioPadrao;

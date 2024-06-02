@@ -78,10 +78,11 @@ const Variacao = () => {
 
   return (
     <div id="formCalc">
-      <h1>Média Aritmética</h1>
+      <h1>Coeficiente de Variação</h1>
       <h3>
-        Para realizar o cálculo de média aritmética, basta adicionar os valores
-        nos campos abaixo e apertar no botão de calcular
+        Para realizar o cálculo do coeficiente de variação (em porcentagem),
+        basta adicionar os valores nos campos abaixo e apertar no botão de
+        calcular
       </h3>
 
       <form onSubmit={handleSubmit}>
@@ -105,6 +106,7 @@ const Variacao = () => {
         ))}
 
         <input
+          id="btnAdd"
           type="button"
           value="Adicionar mais um campo"
           onClick={adicionarCampo}

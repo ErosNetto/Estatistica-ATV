@@ -6,7 +6,9 @@ const NavBar = () => {
   return (
     <div className="navBar">
       <div className="navBarUp">
-        <h1>Trabalho Programas Medidas Decritivas</h1>
+        <NavLink to="/">
+          <h1>Trabalho Programas Medidas Decritivas</h1>
+        </NavLink>
       </div>
       <nav className="navBarDown">
         <ul className="navBarOptions">

@@ -4,7 +4,7 @@ import { BsXCircleFill } from "react-icons/bs";
 // Hooks
 import { useState } from "react";
 
-const VarianciaAmostral = () => {
+const MediaAritmetica = () => {
   const [valores, setValores] = useState([
     { id: 1, valor: "" },
     { id: 2, valor: "" },
@@ -33,41 +33,33 @@ const VarianciaAmostral = () => {
     setValores(novosValores);
   };
 
-  // Função para calcular a variância amostral
-  const calcularVariancia = () => {
+  // Função para calcular a média aritmética
+  const calcularMedia = () => {
     const valoresValidos = valores.filter((item) => item.valor !== "");
     const valoresNumericos = valoresValidos.map((item) =>
       parseFloat(item.valor)
     );
 
     if (valoresNumericos.length === 0) {
-      alert("Adicione pelo menos um valor para calcular a variância amostral.");
+      alert("Adicione pelo menos um valor para calcular a média.");
       return;
     }
 
     const soma = valoresNumericos.reduce((acc, valor) => acc + valor, 0);
     const media = soma / valoresNumericos.length;
-
-    const somaDiferencasAoQuadrado = valoresNumericos.reduce((acc, valor) => {
-      const diferenca = valor - media;
-      return acc + diferenca * diferenca;
-    }, 0);
-
-    const variancia = somaDiferencasAoQuadrado / (valoresNumericos.length - 1);
-    alert(`A variância amostral é: ${variancia.toFixed(2)}`);
+    alert(`A média aritmética é: ${media.toFixed(2)}`);
   };
 
-  // Função para lidar com o envio do formulário
   const handleSubmit = (e) => {
     e.preventDefault();
-    calcularVariancia();
+    calcularMedia();
   };
 
   return (
     <div id="formCalc">
       <h1>Média Aritmética</h1>
       <h3>
-        Para realizar o cálculo de média aritmética, basta adicionar os valores
+        Para realizar o cálculo da média aritmética , basta adicionar os valores
         nos campos abaixo e apertar no botão de calcular
       </h3>
 
@@ -92,6 +84,7 @@ const VarianciaAmostral = () => {
         ))}
 
         <input
+          id="btnAdd"
           type="button"
           value="Adicionar mais um campo"
           onClick={adicionarCampo}
@@ -102,4 +95,4 @@ const VarianciaAmostral = () => {
   );
 };
 
-export default VarianciaAmostral;
+export default MediaAritmetica;

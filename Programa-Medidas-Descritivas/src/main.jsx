@@ -7,12 +7,13 @@ import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 // Pages
-import MediaAritmetica from "./components/MediaAritmetica/MediaAritmetica";
-import Mediana from "./components/Mediana/Mediana.jsx";
-import VarianciaAmostral from "./components/VarianciaAmostral/VarianciaAmostral.jsx";
-import DesvioPadrao from "./components/DesvioPadrao/DesvioPadrao.jsx";
-import Variacao from "./components/Variacao/Variacao.jsx";
-import HomogeneoHeterogeneo from "./components/HomogeneoHeterogeneo/HomogeneoHeterogeneo.jsx";
+import Home from "./pages/Home/Home.jsx";
+import MediaAritmetica from "./pages/MediaAritmetica/MediaAritmetica.jsx";
+import Mediana from "./pages/Mediana/Mediana.jsx";
+import VarianciaAmostral from "./pages/VarianciaAmostral/VarianciaAmostral.jsx";
+import DesvioPadrao from "./pages/DesvioPadrao/DesvioPadrao.jsx";
+import Variacao from "./pages/Variacao/Variacao.jsx";
+import HomogeneoHeterogeneo from "./pages/HomogeneoHeterogeneo/HomogeneoHeterogeneo.jsx";
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        // element: <Home />,
+        element: <Home />,
       },
       {
         path: "/media-aritmetica",

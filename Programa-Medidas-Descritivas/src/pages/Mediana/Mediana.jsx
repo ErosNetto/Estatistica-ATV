@@ -4,7 +4,7 @@ import { BsXCircleFill } from "react-icons/bs";
 // Hooks
 import { useState } from "react";
 
-const DesvioPadrao = () => {
+const Mediana = () => {
   const [valores, setValores] = useState([
     { id: 1, valor: "" },
     { id: 2, valor: "" },
@@ -33,38 +33,48 @@ const DesvioPadrao = () => {
     setValores(novosValores);
   };
 
-  // Função para calcular o desvio padrão
-  const calcularDesvioPadrao = () => {
+  // Função para calcular a mediana
+  const calcularMediana = () => {
     const valoresValidos = valores.filter((item) => item.valor !== "");
     const valoresNumericos = valoresValidos.map((item) =>
       parseFloat(item.valor)
     );
 
-    const soma = valoresNumericos.reduce((acc, valor) => acc + valor, 0);
-    const media = soma / valoresNumericos.length;
+    if (valoresNumericos.length === 0) {
+      alert("Adicione pelo menos um valor para calcular a mediana.");
+      return;
+    }
 
-    const somaDiferencasAoQuadrado = valoresNumericos.reduce((acc, valor) => {
-      const diferenca = valor - media;
-      return acc + diferenca * diferenca;
-    }, 0);
+    // Ordenar os valores
+    valoresNumericos.sort((a, b) => a - b);
 
-    const variancia = somaDiferencasAoQuadrado / (valoresNumericos.length - 1);
+    // Verificar se o número de elementos é par ou ímpar
+    const meio = Math.floor(valoresNumericos.length / 2);
 
-    const desvioPadrao = Math.sqrt(variancia);
-    alert(`O desvio padrão é: ${desvioPadrao.toFixed(2)}`);
+    let mediana;
+
+    if (valoresNumericos.length % 2 === 0) {
+      // Se for par, mediana é a média dos dois valores do meio
+      mediana = (valoresNumericos[meio - 1] + valoresNumericos[meio]) / 2;
+    } else {
+      // Se for ímpar, mediana é o valor do meio
+      mediana = valoresNumericos[meio];
+    }
+
+    alert(`A mediana é: ${mediana.toFixed(2)}`);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    calcularDesvioPadrao();
+    calcularMediana();
   };
 
   return (
     <div id="formCalc">
-      <h1>Média Aritmética</h1>
+      <h1>Mediana</h1>
       <h3>
-        Para realizar o cálculo de média aritmética, basta adicionar os valores
-        nos campos abaixo e apertar no botão de calcular
+        Para realizar o cálculo da mediana, basta adicionar os valores nos
+        campos abaixo e apertar no botão de calcular
       </h3>
 
       <form onSubmit={handleSubmit}>
@@ -88,6 +98,7 @@ const DesvioPadrao = () => {
         ))}
 
         <input
+          id="btnAdd"
           type="button"
           value="Adicionar mais um campo"
           onClick={adicionarCampo}
@@ -98,4 +109,4 @@ const DesvioPadrao = () => {
   );
 };
 
-export default DesvioPadrao;
+export default Mediana;

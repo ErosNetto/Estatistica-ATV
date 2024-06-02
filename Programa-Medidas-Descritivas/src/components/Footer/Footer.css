@@ -1,16 +1,46 @@
 .footer {
+  background: #0a0a0a;
+  color: white;
   height: auto;
   width: 100%;
-  padding: 2em;
+  font-size: 14px;
   margin-top: 1em;
+  border-top: 2px solid #08273c;
 }
 
-.student {
+.footerStudents {
   width: 100%;
+  padding: 15px;
+  text-align: center;
+}
+
+.footerDiv {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+  align-items: stretch;
+  padding: 1em 10px 2em 10px;
 }
 
-.studentName {
-  padding: 1em;
+.footerDivItem {
+  display: flex;
+  justify-content: center;
+  width: calc(100% / 3);
+}
+
+.footerdDivColuna h3 {
+  margin-bottom: 0.5em;
+}
+
+@media (max-width: 768px) {
+  .footer-div-1,
+  .footer-div-2,
+  .footer-div-3 {
+    width: 50%;
+    padding: 10px;
+  }
+  .footer-div {
+    padding: 1em 0 2em 0;
+  }
 }

@@ -2,25 +2,29 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div className="footer">
-      <div className="title">
-        <h3>Nossa Esquipe</h3>
+    <footer className="footer" id="contato">
+      <h2 className="footerStudents">Menbros da equipe</h2>
+      <div className="footerDiv">
+        <div className="footerDivItem">
+          <div className="footerdDivColuna">
+            <h3>Eros Netto Antuens</h3>
+            <p>RA: 2023200550</p>
+          </div>
+        </div>
+        <div className="footerDivItem">
+          <div className="footerdDivColuna">
+            <h3>Eros Netto Antuens</h3>
+            <p>RA: 2023200550</p>
+          </div>
+        </div>
+        <div className="footerDivItem">
+          <div className="footerdDivColuna">
+            <h3>Eros Netto Antuens</h3>
+            <p>RA: 2023200550</p>
+          </div>
+        </div>
       </div>
-      <div className="student">
-        <div className="studentName">
-          <h3>Eros Netto Antunes</h3>
-          <p>RA: 2023200550</p>
-        </div>
-        <div className="studentName">
-          <h3>Eros Netto Antunes</h3>
-          <p>RA: 2023200550</p>
-        </div>
-        <div className="studentName">
-          <h3>Eros Netto Antunes</h3>
-          <p>RA: 2023200550</p>
-        </div>
-      </div>
-    </div>
+    </footer>
   );
 };
 

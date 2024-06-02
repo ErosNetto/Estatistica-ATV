@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background: #0a0a0a;
+  background: #0f0f0f;
   font-family: "poppins", sans-serif;
   color: #fafafa;
 }
@@ -31,7 +31,7 @@ form {
 #formCalc {
   background: #0a0a0a;
   padding: 2em 3em;
-  border: 1px solid #73c883;
+  border: 2px solid #08273c;
   border-radius: 10px;
   margin: 3em auto;
   max-width: 50%;
@@ -107,10 +107,6 @@ input::placeholder {
   color: #aaa;
 }
 
-input:hover,
-input:focus {
-}
-
 button,
 input[type="button"],
 input[type="submit"] {
@@ -118,8 +114,8 @@ input[type="submit"] {
   border-radius: 10px;
   padding: 1em;
   font-weight: 600;
-  font-size: 1em;
-  margin: 0.5em auto;
+  font-size: 1.2em;
+  margin: 0.3em auto;
   outline: none;
   color: #fafafa;
   background-color: #08273c;
@@ -134,4 +130,15 @@ input[type="submit"]:hover,
 input[type="submit"]:focus {
   cursor: pointer;
   opacity: 1;
+}
+
+#btnAdd {
+  background: #089622;
+}
+
+@media screen and (max-width: 767px) {
+  #formCalc {
+    margin: 4em 1em;
+    max-width: 100%;
+  }
 }
