@@ -17,11 +17,11 @@ import HomogeneoHeterogeneo from "./pages/HomogeneoHeterogeneo/HomogeneoHeteroge
 
 const router = createBrowserRouter([
   {
-    path: "/Estatistica-ATV",
+    path: "/",
     element: <App />,
     children: [
       {
-        path: "/Estatistica-ATV",
+        path: "/",
         element: <Home />,
       },
       {
